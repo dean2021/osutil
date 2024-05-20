@@ -1,0 +1,7 @@
+.idea/
+deploy/
+vendor/
+.DS_Store
+*.log
+*.log.*
+*.toml
