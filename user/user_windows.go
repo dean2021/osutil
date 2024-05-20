@@ -2,7 +2,6 @@ package user
 
 import (
 	"fmt"
-	"github.com/bi-zone/wmi"
 	"os/exec"
 )
 
@@ -76,7 +75,7 @@ func Lock(username string) error {
 	return nil
 }
 
-// UnLock unlocks a user account.
+// Unlock unlocks a user account.
 // Parameters:
 //
 //	username - The name of the user whose account is to be unlocked.
@@ -84,7 +83,7 @@ func Lock(username string) error {
 // Returns:
 //
 //	error - Returns an error message if unlocking fails, otherwise nil.
-func UnLock(username string) error {
+func Unlock(username string) error {
 	cmd := exec.Command("net", "user", username, "/active:yes")
 	_, err := cmd.CombinedOutput()
 	if err != nil {

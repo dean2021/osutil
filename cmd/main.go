@@ -66,7 +66,7 @@ func UserManager(ctx *cli.Context) error {
 		if username == "" {
 			return fmt.Errorf("username is empty") // Return error if username is missing
 		}
-		return user.UnLock(username) // Unlock the user's account
+		return user.Unlock(username) // Unlock the user's account
 	}
 
 	// Change a user's password
